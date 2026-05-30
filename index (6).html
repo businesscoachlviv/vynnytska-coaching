@@ -1,0 +1,2582 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Стратегічна сесія · Оксана Винницька</title>
+<meta name="description" content="Стратегічна діагностична сесія для підприємців і експертів — системні продажі та зріле лідерство. Перші 10 учасників — $20.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+/* === FONTS === */
+@font-face {
+  font-family: 'Lato Display';
+  src: url('assets/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* === TOKENS === */
+:root {
+  --ink: #0d0d0e;
+  --ink-2: #1a1a1c;
+  --ink-3: #2a2a2d;
+  --paper: #f6f2ea;
+  --paper-2: #efe9dc;
+  --white: #ffffff;
+  --rule: rgba(255,255,255,0.12);
+  --rule-dark: rgba(13,13,14,0.12);
+  --orange: #F26B1F;
+  --orange-2: #ff7d2e;
+  --muted: rgba(255,255,255,0.66);
+  --muted-dark: rgba(13,13,14,0.62);
+
+  --fs-display: clamp(56px, 8.4vw, 148px);
+  --fs-h1: clamp(40px, 5.6vw, 88px);
+  --fs-h2: clamp(32px, 4vw, 60px);
+  --fs-h3: clamp(22px, 2vw, 30px);
+  --fs-eyebrow: clamp(11px, 0.9vw, 13px);
+  --fs-lead: clamp(18px, 1.4vw, 22px);
+  --fs-body: clamp(15px, 1.05vw, 17px);
+  --fs-small: 14px;
+
+  --maxw: 1440px;
+  --pad-x: clamp(20px, 4.5vw, 80px);
+  --section-y: clamp(80px, 9vw, 160px);
+
+  --font-display: 'Lato Display', 'Lato', system-ui, sans-serif;
+  --font-body: 'Lato', system-ui, -apple-system, sans-serif;
+}
+
+/* === RESET === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+ul { list-style: none; }
+::selection { background: var(--orange); color: var(--ink); }
+
+/* === LAYOUT === */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+.section { padding: var(--section-y) 0; position: relative; }
+
+/* === TYPE === */
+.display, .h1, .h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.display { font-size: var(--fs-display); }
+.h1 { font-size: var(--fs-h1); line-height: 0.96; }
+.h2 { font-size: var(--fs-h2); line-height: 1.0; letter-spacing: -0.02em; }
+.h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.lead { font-size: var(--fs-lead); line-height: 1.45; font-weight: 400; }
+.small { font-size: var(--fs-small); }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* === HEADER === */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  background: rgba(13,13,14,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+  color: #fff;
+  transition: background .3s ease;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.brand-logo--lg { height: 48px; }
+
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.7);
+  transition: color .2s;
+}
+.nav-links a:hover { color: #fff; }
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 30px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #0d0d0e;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+.btn:hover { background: var(--orange-2); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn .arrow {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #0d0d0e;
+  color: var(--orange);
+  display: grid; place-items: center;
+  font-size: 12px;
+  font-weight: 900;
+  transition: transform .2s ease;
+}
+.btn:hover .arrow { transform: translateX(3px); }
+.btn-lg { padding: 22px 36px; font-size: 17px; }
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); }
+.btn-ghost .arrow { background: #fff; color: #0d0d0e; }
+
+/* === HERO === */
+.hero {
+  background: var(--ink);
+  color: #fff;
+  padding-top: 160px;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: end;
+  min-height: calc(100vh - 72px);
+  position: relative;
+}
+.hero-copy {
+  padding-bottom: clamp(60px, 8vw, 120px);
+  position: relative;
+  z-index: 2;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--orange);
+  margin-bottom: 36px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 56px; height: 2px;
+  background: var(--orange);
+}
+.hero-title { color: #fff; margin-bottom: 36px; }
+.hero-title .accent { color: var(--orange); font-style: italic; font-weight: 900; }
+.hero-sub {
+  font-size: var(--fs-lead);
+  color: rgba(255,255,255,0.75);
+  max-width: 580px;
+  margin-bottom: 44px;
+  text-wrap: pretty;
+}
+.hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+  max-width: 560px;
+}
+.hero-list li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  font-size: 17px;
+  line-height: 1.4;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+.hero-list li .num {
+  font-family: var(--font-display);
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  min-width: 28px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-actions .seats {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.06em;
+}
+.hero-actions .seats b { color: var(--orange); font-weight: 700; }
+
+.hero-photo {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.hero-photo-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: contrast(1.02) saturate(0.95);
+}
+.hero-photo-frame::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(13,13,14,0.55) 0%, rgba(13,13,14,0) 22%, rgba(13,13,14,0) 70%, rgba(13,13,14,0.85) 100%),
+    linear-gradient(90deg, rgba(13,13,14,0.7) 0%, rgba(13,13,14,0) 30%);
+  pointer-events: none;
+}
+.hero-photo-tag {
+  position: absolute;
+  bottom: 60px; left: 32px;
+  z-index: 2;
+  color: #fff;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+.hero-photo-tag b { display: block; font-size: 22px; line-height: 1.1; }
+.hero-photo-tag span { font-size: 12px; color: var(--orange); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+
+.hero-pretitle {
+  position: absolute;
+  top: 24px; right: var(--pad-x);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+  text-align: right;
+  z-index: 3;
+}
+.hero-pretitle b { color: var(--orange); }
+
+/* === STATS STRIP === */
+.stats {
+  background: var(--ink);
+  color: #fff;
+  border-top: 1px solid var(--rule);
+  padding: 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stat {
+  padding: clamp(40px, 5vw, 72px) clamp(20px, 3vw, 48px);
+  border-left: 1px solid var(--rule);
+}
+.stat:first-child { border-left: none; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 5.5vw, 88px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.stat-num .plus { color: var(--orange); }
+.stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+/* === SECTION INTRO === */
+.section-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 5vw, 100px);
+  align-items: end;
+  margin-bottom: clamp(48px, 6vw, 96px);
+}
+.section-intro .label {
+  display: flex; align-items: center; gap: 12px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+.section-intro .label .num {
+  font-family: var(--font-display);
+  color: var(--ink);
+  background: var(--orange);
+  width: 36px; height: 24px;
+  display: inline-grid; place-items: center;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.section-intro p.lead { color: var(--muted-dark); max-width: 620px; }
+.section-intro--dark .section-intro p.lead,
+.section--dark .section-intro p.lead { color: var(--muted); }
+
+/* === SECTION VARIANTS === */
+.section--paper { background: var(--paper); color: var(--ink); }
+.section--paper-2 { background: var(--paper-2); color: var(--ink); }
+.section--dark { background: var(--ink); color: #fff; }
+.section--orange { background: var(--orange); color: var(--ink); }
+
+/* === PAIN POINTS (BLOCK 2) === */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule-dark);
+  border-left: 1px solid var(--rule-dark);
+}
+.pain-cell {
+  padding: clamp(28px, 3vw, 44px);
+  border-right: 1px solid var(--rule-dark);
+  border-bottom: 1px solid var(--rule-dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 220px;
+  transition: background .2s ease;
+}
+.pain-cell:hover { background: rgba(242,107,31,0.05); }
+.pain-cell .idx {
+  font-family: var(--font-display);
+  color: var(--orange);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.pain-cell p {
+  font-size: clamp(17px, 1.3vw, 21px);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  margin-top: auto;
+}
+
+.pain-quote {
+  margin-top: clamp(48px, 6vw, 80px);
+  padding: clamp(40px, 5vw, 64px);
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+.pain-quote .qmark {
+  font-family: var(--font-display);
+  font-size: clamp(120px, 14vw, 200px);
+  line-height: 0.7;
+  color: var(--orange);
+}
+.pain-quote .text {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.pain-quote .text em { color: var(--orange); font-style: normal; }
+
+/* === OUTCOMES (BLOCK 3) === */
+.outcome-list {
+  display: flex;
+  flex-direction: column;
+}
+.outcome-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+  padding: clamp(28px, 3vw, 44px) 0;
+  border-top: 1px solid var(--rule-dark);
+  transition: padding .25s ease;
+  cursor: default;
+}
+.outcome-row:last-child { border-bottom: 1px solid var(--rule-dark); }
+.outcome-row:hover { padding-left: 12px; }
+.outcome-num {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 64px);
+  color: var(--orange);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.outcome-text {
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  max-width: 720px;
+}
+.outcome-tag {
+  font-size: 11px;
+  color: var(--muted-dark);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.outcome-callout {
+  margin-top: 56px;
+  padding: 24px 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.outcome-callout em { color: var(--orange); font-style: normal; }
+
+/* === BONUS (BLOCK 4) === */
+.bonus {
+  background: var(--orange);
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+.bonus::before {
+  content: '★';
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(300px, 40vw, 600px);
+  top: -10%; right: -8%;
+  color: rgba(13,13,14,0.05);
+  line-height: 0.8;
+  pointer-events: none;
+}
+.bonus .container { position: relative; z-index: 1; }
+.bonus-single {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bonus-label {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.bonus h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  margin-bottom: clamp(40px, 5vw, 72px);
+  max-width: 22ch;
+  margin-left: auto; margin-right: auto;
+  text-wrap: balance;
+}
+.bonus-name-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: clamp(36px, 5vw, 72px) clamp(24px, 4vw, 56px);
+  background: var(--ink);
+  color: #fff;
+  margin-bottom: clamp(40px, 5vw, 72px);
+  position: relative;
+}
+.bonus-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+}
+.bonus-title-display {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 8vw, 128px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+.bonus-title-display em { color: var(--orange); font-style: italic; }
+.bonus-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 56px);
+  text-align: left;
+}
+.bonus-columns .bonus-list {
+  display: flex; flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(13,13,14,0.18);
+}
+.bonus-columns .bonus-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(13,13,14,0.18);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.4;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.bonus-columns .bonus-list li::before {
+  content: '→';
+  font-weight: 900;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+/* === FOR WHOM (BLOCK 5) === */
+.fits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.fits-col {
+  padding: clamp(36px, 4vw, 64px);
+}
+.fits-col--yes { background: var(--paper-2); color: var(--ink); }
+.fits-col--no { background: var(--ink); color: #fff; }
+.fits-col h3 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.6vw, 40px);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 36px;
+  display: flex; align-items: center; gap: 16px;
+}
+.fits-col h3 .icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+.fits-col--yes h3 .icon { background: var(--orange); color: var(--ink); }
+.fits-col--no h3 .icon { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
+.fits-list { display: flex; flex-direction: column; gap: 18px; }
+.fits-list li {
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.4;
+  padding-left: 28px;
+  position: relative;
+}
+.fits-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.55em;
+  width: 14px; height: 2px;
+  background: var(--orange);
+}
+.fits-col--no .fits-list li::before { background: rgba(255,255,255,0.3); }
+.fits-col--no .fits-list li { color: rgba(255,255,255,0.65); }
+
+/* === FORMAT (BLOCK 6) === */
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule-dark);
+}
+.format-step {
+  padding: clamp(28px, 3vw, 44px) clamp(20px, 2vw, 32px);
+  border-right: 1px solid var(--rule-dark);
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  transition: background .2s;
+}
+.format-step:last-child { border-right: none; }
+.format-step:hover { background: var(--paper-2); }
+.format-step .step-num {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 6vw, 96px);
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.04em;
+}
+.format-step .step-num b { color: var(--orange); }
+.format-step .step-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.format-step .step-desc {
+  font-size: 14px;
+  color: var(--muted-dark);
+  line-height: 1.5;
+  margin-top: auto;
+}
+.format-step .step-tag {
+  position: absolute;
+  top: clamp(28px, 3vw, 44px);
+  right: clamp(20px, 2vw, 32px);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* === PRICE (BLOCK 7) === */
+.price {
+  background: var(--ink);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.price::before {
+  content: '$20';
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(300px, 40vw, 700px);
+  line-height: 0.8;
+  color: rgba(242,107,31,0.06);
+  bottom: -10%;
+  right: -5%;
+  z-index: 0;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+}
+.price .container { position: relative; z-index: 1; }
+.price-headline {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  max-width: 14ch;
+  margin-bottom: clamp(48px, 5vw, 80px);
+}
+.price-headline em { color: var(--orange); font-style: normal; }
+
+.price-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: stretch;
+}
+.price-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--rule);
+  padding: clamp(36px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.price-card .tag {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--orange);
+}
+.price-card .from {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--font-display);
+}
+.price-card .from .was {
+  font-size: clamp(28px, 2.4vw, 36px);
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+}
+.price-card .from .arrow-px { color: var(--orange); font-size: 24px; }
+.price-card .now {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 9vw, 148px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--orange);
+}
+.price-card .now .cur { font-size: 0.55em; vertical-align: top; opacity: 0.9; }
+.price-card .savings {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.04em;
+}
+.price-card .savings b { color: var(--orange); font-weight: 800; }
+.price-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(36px, 4vw, 56px) 0;
+}
+.price-explain h3 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 28px);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--orange);
+}
+.price-explain p {
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.55;
+  color: rgba(255,255,255,0.8);
+  max-width: 56ch;
+}
+.price-explain ul {
+  margin-top: 20px;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.price-explain ul li {
+  display: flex; gap: 14px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+}
+.price-explain ul li::before {
+  content: '✓';
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.seats-bar {
+  margin-top: clamp(48px, 5vw, 72px);
+  padding: 28px 32px;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.seats-bar .left {
+  display: flex; align-items: center; gap: 20px;
+}
+.seats-bar .left .clock {
+  width: 40px; height: 40px;
+  border: 1.5px solid var(--orange);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--orange);
+  font-size: 18px;
+}
+.seats-bar .info {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.04em;
+}
+.seats-bar .info b { color: #fff; font-weight: 700; }
+.seats-bar .dots { display: flex; gap: 6px; }
+.seats-bar .dot {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--orange);
+}
+.seats-bar .dot.taken { background: var(--orange); }
+
+/* === ABOUT (BLOCK 8) === */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: flex-start;
+}
+.about-photo {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.about-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.about-photo .name-tag {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(180deg, transparent, rgba(13,13,14,0.85));
+  color: #fff;
+}
+.about-photo .name-tag b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 28px);
+  letter-spacing: -0.01em;
+}
+.about-photo .name-tag span {
+  font-size: 12px;
+  color: var(--orange);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.about-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 60px);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+.about-content h2 .accent { color: var(--orange); }
+.about-content > p {
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--muted-dark);
+  margin-bottom: 20px;
+  max-width: 60ch;
+}
+.about-method {
+  margin: 32px 0;
+  padding: 24px;
+  background: var(--paper-2);
+  border-left: 3px solid var(--orange);
+}
+.about-method h4 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--orange);
+}
+.about-method ul li {
+  font-size: 15px;
+  padding: 6px 0;
+  display: flex; gap: 12px;
+}
+.about-method ul li::before { content: '◆'; color: var(--orange); font-size: 10px; align-self: center; }
+
+.about-credentials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 40px 0;
+  border-top: 1px solid var(--rule-dark);
+}
+.cred-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-dark);
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-right: 20px;
+}
+.cred-item:nth-child(odd) { padding-right: 24px; }
+.cred-item:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--rule-dark); }
+.cred-num {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.6vw, 40px);
+  color: var(--orange);
+  line-height: 1;
+  min-width: 80px;
+}
+.cred-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.about-roles {
+  margin: 32px 0;
+}
+.about-roles h4 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--orange);
+}
+.about-roles ul {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.about-roles ul li {
+  padding: 8px 14px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.clients {
+  margin-top: clamp(56px, 6vw, 96px);
+}
+.clients h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 32px);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.clients .sub {
+  font-size: 13px;
+  color: var(--muted-dark);
+  margin-bottom: 28px;
+  letter-spacing: 0.04em;
+}
+.clients-marquee {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--rule-dark);
+  border-bottom: 1px solid var(--rule-dark);
+  padding: 18px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.clients-track {
+  display: flex;
+  gap: 48px;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 32px);
+  letter-spacing: -0.01em;
+}
+.clients-track span { display: inline-block; padding-right: 12px; }
+.clients-track .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--orange);
+  display: inline-block;
+  margin: 0 4px;
+  vertical-align: middle;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* === TESTIMONIALS (BLOCK 9) === */
+.testi {
+  background: var(--paper-2);
+}
+.testi-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+}
+.testi-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testi-shot {
+  display: block;
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--rule-dark);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.testi-shot:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.testi-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.testi-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--ink);
+  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  gap: 10px;
+}
+.testi-meta > span:first-child { color: var(--orange); }
+
+.testi-cta {
+  margin-top: clamp(56px, 6vw, 96px);
+  padding: clamp(36px, 4vw, 64px);
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+.testi-cta h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+}
+.testi-cta h3 b { color: var(--orange); }
+.testi-cta p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  max-width: 60ch;
+  line-height: 1.5;
+}
+
+/* === FINAL CTA (BLOCK 10) === */
+.final-cta {
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6.5vw, 112px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+.final-cta h2 em { color: var(--orange); font-style: italic; }
+.final-cta .sub {
+  font-size: var(--fs-lead);
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 48px;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.final-cta-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 920px;
+  margin: 48px auto 56px;
+  text-align: left;
+}
+.final-cta-steps .step {
+  padding: 24px;
+  border: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.final-cta-steps .step .n {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--orange);
+  letter-spacing: 0.06em;
+}
+.final-cta-steps .step .t {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* === FORM (BLOCK 11) === */
+.form-section {
+  background: var(--paper);
+  padding-bottom: clamp(80px, 9vw, 140px);
+}
+.form-wrap {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(40px, 5vw, 96px);
+  align-items: flex-start;
+}
+.form-side h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3.5vw, 52px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.form-side p {
+  font-size: 16px;
+  color: var(--muted-dark);
+  line-height: 1.55;
+  margin-bottom: 32px;
+}
+.form-side .note {
+  padding: 18px 20px;
+  background: var(--paper-2);
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.5;
+  border-left: 3px solid var(--orange);
+}
+.form {
+  background: #fff;
+  padding: clamp(28px, 3vw, 48px);
+  border: 1px solid var(--rule-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-field { display: flex; flex-direction: column; gap: 10px; }
+.form-field label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+.form-field label .opt {
+  color: var(--orange);
+  font-size: 11px;
+  margin-left: 6px;
+}
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--paper);
+  border: 1px solid var(--rule-dark);
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color .15s, background .15s;
+}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--orange);
+  background: #fff;
+}
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-radios { display: flex; flex-direction: column; gap: 10px; }
+.form-radios label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--paper);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  transition: background .15s;
+}
+.form-radios label:hover { background: var(--paper-2); }
+.form-radios input[type=checkbox] {
+  width: 18px; height: 18px;
+  appearance: none;
+  border: 1.5px solid var(--rule-dark);
+  background: #fff;
+  display: grid; place-items: center;
+  cursor: pointer;
+}
+.form-radios input[type=checkbox]:checked {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+.form-radios input[type=checkbox]:checked::after {
+  content: '✓';
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 11px;
+}
+.form .submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.form .privacy {
+  font-size: 12px;
+  color: var(--muted-dark);
+  max-width: 30ch;
+  line-height: 1.4;
+}
+.form .submit {
+  background: var(--ink);
+  color: var(--orange);
+}
+.form .submit:hover { background: var(--ink-3); }
+.form .submit .arrow { background: var(--orange); color: var(--ink); }
+
+/* === SOCIAL CTA === */
+.socials {
+  margin-top: clamp(56px, 6vw, 88px);
+  padding-top: clamp(36px, 4vw, 56px);
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+.socials-label {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 24px;
+}
+.socials-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--rule);
+  color: #fff;
+  text-align: left;
+  transition: background .2s, border-color .2s, transform .15s;
+  min-width: 260px;
+}
+.social-btn:hover {
+  background: rgba(242,107,31,0.1);
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+.social-btn svg { color: var(--orange); flex-shrink: 0; }
+.social-btn .social-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; flex: 1; }
+.social-btn .social-text span {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+}
+.social-btn .social-text b {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: -0.005em;
+}
+.social-btn .social-arrow {
+  color: rgba(255,255,255,0.5);
+  font-size: 18px;
+  transition: color .2s, transform .2s;
+}
+.social-btn:hover .social-arrow {
+  color: var(--orange);
+  transform: translate(2px, -2px);
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.55);
+  padding: 48px 0 32px;
+  font-size: 13px;
+}
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.site-footer a:hover { color: var(--orange); }
+.footer-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+
+/* === STICKY CTA === */
+.sticky-cta {
+  position: fixed;
+  bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 12px 12px 24px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  transition: transform .3s ease;
+}
+.sticky-cta.visible { transform: translateX(-50%) translateY(0); }
+.sticky-cta .label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.sticky-cta .label b { color: var(--orange); }
+.sticky-cta .btn { padding: 12px 22px; font-size: 14px; }
+
+/* === SCROLL REVEAL === */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* === DARK SECTION OVERRIDES === */
+.section--dark .h2, .section--dark .h3 { color: #fff; }
+.section--dark .section-intro p.lead { color: var(--muted); }
+
+/* === MODAL === */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(13,13,14,0.75);
+  backdrop-filter: blur(8px);
+  display: grid; place-items: center;
+  padding: 24px;
+  animation: fadeIn .25s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  position: relative;
+  width: 100%; max-width: 760px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid rgba(13,13,14,0.18);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  animation: rise .35s cubic-bezier(.22,1,.36,1);
+}
+@keyframes rise { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 40px; height: 40px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  font-size: 16px;
+  transition: background .2s;
+}
+.modal-close:hover { background: var(--orange); color: var(--ink); }
+
+.modal-inner { padding: clamp(28px, 4vw, 48px); }
+.modal-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.modal-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.modal-head h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+  max-width: 22ch;
+}
+.modal-sub { font-size: 14px; color: var(--muted-dark); line-height: 1.5; max-width: 36ch; }
+
+.modal-price {
+  text-align: right;
+  font-family: var(--font-display);
+  padding: 12px 16px;
+  background: var(--ink);
+  color: #fff;
+  min-width: 110px;
+}
+.modal-price .was {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.modal-price .now {
+  font-size: 34px;
+  line-height: 1;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+}
+.modal-price .seats-tag {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 10px;
+  font-weight: 700;
+}
+.modal-price .seats-tag b { color: var(--orange); }
+
+.modal-steps {
+  display: flex;
+  gap: 0;
+  margin-bottom: 28px;
+  border-top: 1px solid var(--rule-dark);
+  border-bottom: 1px solid var(--rule-dark);
+}
+.mstep {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid var(--rule-dark);
+  transition: all .25s;
+}
+.mstep:last-child { border-right: none; }
+.mstep span {
+  font-family: var(--font-display);
+  font-size: 13px;
+  background: rgba(13,13,14,0.06);
+  width: 24px; height: 24px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  letter-spacing: 0;
+}
+.mstep.active { color: var(--ink); background: var(--paper-2); }
+.mstep.active span { background: var(--orange); color: var(--ink); }
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.modal-form .form-field input,
+.modal-form .form-field textarea {
+  background: #fff;
+}
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-dark);
+}
+.modal-nav .privacy {
+  font-size: 12px;
+  color: var(--muted-dark);
+  max-width: 32ch;
+  line-height: 1.45;
+}
+.modal-nav-btns { display: flex; gap: 10px; }
+.modal-form button[disabled] { opacity: 0.4; cursor: not-allowed; }
+
+.modal-success {
+  padding: clamp(40px, 5vw, 64px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.modal-success .success-mark {
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  display: grid; place-items: center;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.modal-success h3 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.modal-success p {
+  font-size: 15px;
+  color: var(--muted-dark);
+  max-width: 48ch;
+  line-height: 1.55;
+}
+.modal-success .micro { font-size: 12px; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+.modal-success .btn { margin-top: 12px; }
+.success-message {
+  background: var(--paper-2);
+  border: 1px dashed rgba(13,13,14,0.2);
+  padding: 18px 20px;
+  margin-top: 8px;
+  max-width: 460px;
+  text-align: left;
+  width: 100%;
+}
+.success-message-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.success-message-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+}
+.success-copy {
+  font-size: 12px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule-dark);
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+.success-copy:hover { background: var(--orange); }
+
+/* === RESPONSIVE === */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hero-grid { grid-template-columns: 1fr; gap: 0; }
+  .hero-photo { order: -1; aspect-ratio: 4/5; min-height: 0; }
+  .hero-photo-frame { min-height: 0; height: 100%; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-top: 1px solid var(--rule); }
+  .stat:nth-child(-n+2) { border-top: none; }
+  .stat:nth-child(odd) { border-left: none; }
+  .section-intro { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr 1fr; }
+  .bonus-grid, .about-grid, .price-card-grid, .form-wrap { grid-template-columns: 1fr; }
+  .fits-grid { grid-template-columns: 1fr; }
+  .format-grid { grid-template-columns: 1fr 1fr; }
+  .format-step { border-bottom: 1px solid var(--rule-dark); }
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .final-cta-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .pain-grid { grid-template-columns: 1fr; }
+  .format-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .outcome-row { grid-template-columns: 60px 1fr; gap: 20px; }
+  .outcome-tag { grid-column: 2; margin-top: 4px; }
+  .about-credentials { grid-template-columns: 1fr; }
+  .cred-item:nth-child(even) { padding-left: 0; border-left: none; }
+  .pain-quote { grid-template-columns: 1fr; gap: 16px; }
+  .pain-quote .qmark { font-size: 80px; }
+  .hero-pretitle { display: none; }
+  .modal-head { grid-template-columns: 1fr; }
+  .modal-price { justify-self: flex-start; }
+  .mstep { padding: 12px 10px; font-size: 11px; }
+  .mstep span { width: 22px; height: 22px; font-size: 11px; }
+  .modal-nav { flex-direction: column-reverse; align-items: stretch; }
+  .modal-nav-btns { justify-content: stretch; }
+  .modal-nav-btns .btn { flex: 1; justify-content: center; }
+  .site-header .container { height: 60px; }
+  .brand-logo { height: 30px; }
+  .brand-logo--lg { height: 36px; }
+  .hero { padding-top: 100px; }
+  .hero-list li { font-size: 15px; }
+  .sticky-cta { padding: 10px 10px 10px 16px; gap: 12px; bottom: 16px; }
+  .sticky-cta .label { font-size: 12px; }
+  .sticky-cta .btn { padding: 10px 16px; font-size: 13px; }
+  .socials-row { flex-direction: column; align-items: stretch; }
+  .social-btn { min-width: 0; width: 100%; }
+}
+
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script>
+  // Initial tweak defaults — host parses this block on save
+  window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+    "theme": "dark",
+    "accent": "#F26B1F",
+    "seatsRemaining": 7,
+    "heroVariant": "split",
+    "fontScale": 1.0,
+    "photoTone": "natural"
+  }/*EDITMODE-END*/;
+</script>
+<script type="application/json" id="speaker-notes">[]</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '892749903784140');
+fbq('track', 'PageView');
+
+// Track lead conversion when CTA is clicked
+window.addEventListener('ov:cta-click', function() {
+  fbq('track', 'Lead');
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#0d0d0e"/>
+    <circle cx="50" cy="45" r="20" fill="#F26B1F"/>
+    <path d="M 35 35 L 50 65 L 65 35 Z" fill="#0d0d0e"/>
+    <text x="50" y="85" font-family="sans-serif" font-size="9" font-weight="900" fill="#fff" text-anchor="middle">OV</text>
+  </svg>
+</template>
+</head>
+<body data-theme="dark">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="#top" class="brand" aria-label="Oksana Vynnytska — Business Coach">
+      <img src="logo-dark.png" alt="Oksana Vynnytska — Business Coach" class="brand-logo">
+    </a>
+    <nav class="nav-links" aria-label="Розділи лендінгу">
+      <a href="#problems">Проблеми</a>
+      <a href="#outcomes">Результати</a>
+      <a href="#format">Формат</a>
+      <a href="#price">Інвестиція</a>
+      <a href="#about">Спікер</a>
+    </nav>
+    <button class="btn" data-open-form>
+      <span>Записатися</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ BLOCK 1 — HERO ============ -->
+<section class="hero" id="top" data-screen-label="01 Hero">
+  <div class="hero-pretitle">
+    <span>Стратегічна діагностична сесія</span>
+    <span><b>60 хв</b> · 1-на-1 · онлайн</span>
+  </div>
+
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <div class="hero-eyebrow eyebrow"><span>Для підприємців і експертів</span></div>
+
+        <h1 class="display hero-title">
+          Ви&nbsp;працюєте багато,<br>
+          а&nbsp;дохід <span class="accent">стоїть на&nbsp;місці</span>?
+        </h1>
+
+        <p class="hero-sub">
+          Проблема не&nbsp;у&nbsp;Вас. Проблема — у&nbsp;відсутності архітектури масштабу. За&nbsp;60&nbsp;хвилин розберемо, де&nbsp;саме ви&nbsp;залишаєте гроші, і&nbsp;побудуємо план до&nbsp;×2 в&nbsp;доході.
+        </p>
+
+        <ul class="hero-list">
+          <li><span class="num">01</span><span>Чітке розуміння, де&nbsp;саме ви&nbsp;втрачаєте гроші</span></li>
+          <li><span class="num">02</span><span>1–3 ключові обмеження, які стримують ваш ріст</span></li>
+          <li><span class="num">03</span><span>Конкретний стратегічний крок до&nbsp;×2 у&nbsp;доході</span></li>
+        </ul>
+
+        <div class="hero-actions">
+          <button class="btn btn-lg" data-open-form>
+            <span>Записатися за&nbsp;$20</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+          <span class="seats">Залишилось <b data-seats-count>7</b>&nbsp;/&nbsp;10 місць</span>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img src="speaker-hero.jpg" alt="Оксана Винницька — бізнес-коуч" data-photo-tone>
+        </div>
+        <div class="hero-photo-tag">
+          <span>Спікер</span>
+          <b>Оксана Винницька</b>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS STRIP ============ -->
+<section class="stats" data-screen-label="02 Stats">
+  <div class="stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num"><span data-count-to="11">0</span></div>
+      <div class="stat-label">років у&nbsp;бізнесі та&nbsp;корпоративному навчанні</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num"><span data-count-to="120">0</span><span class="plus">+</span></div>
+      <div class="stat-label">компаній довірили навчання своїх команд з&nbsp;2017</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num"><span data-count-to="5000">0</span><span class="plus">+</span></div>
+      <div class="stat-label">управлінців і&nbsp;менеджерів пройшли мої програми</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num"><span data-count-to="1000">0</span><span class="plus">+</span></div>
+      <div class="stat-label">коуч-сесій. Сертифікований коуч ICF, ТОП-100 жінок України</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 2 — PROBLEMS ============ -->
+<section class="section section--paper" id="problems" data-screen-label="03 Problems">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">01</span><span>Симптоми</span></div>
+        <h2 class="h2">Вам варто пройти&nbsp;сесію, якщо&nbsp;ви&nbsp;впізнаєте&nbsp;себе хоча&nbsp;б&nbsp;у&nbsp;двох пунктах.</h2>
+      </div>
+      <p class="lead">Це&nbsp;не&nbsp;«проблеми характеру» і&nbsp;не&nbsp;«криза». Це&nbsp;типові точки, де&nbsp;бізнес упирається в&nbsp;стелю — і&nbsp;їх&nbsp;можна побачити збоку за&nbsp;один розбір.</p>
+    </div>
+
+    <div class="pain-grid reveal">
+      <div class="pain-cell"><span class="idx">001</span><p>Ви&nbsp;«вперлися» у&nbsp;стелю доходу і&nbsp;не&nbsp;розумієте, що&nbsp;далі.</p></div>
+      <div class="pain-cell"><span class="idx">002</span><p>Продажі нестабільні — місяць густо, місяць пусто.</p></div>
+      <div class="pain-cell"><span class="idx">003</span><p>Ви&nbsp;працюєте багато, але&nbsp;системи немає&nbsp;— є&nbsp;лише хаос.</p></div>
+      <div class="pain-cell"><span class="idx">004</span><p>Команда не&nbsp;бере відповідальність&nbsp;— все тягнете на&nbsp;собі.</p></div>
+      <div class="pain-cell"><span class="idx">005</span><p>Хочете продавати через цінність, а&nbsp;не&nbsp;через тиск і&nbsp;знижки.</p></div>
+      <div class="pain-cell"><span class="idx">006</span><p>Відчуваєте, що&nbsp;можете більше, але&nbsp;немає чіткої стратегії продажів.</p></div>
+    </div>
+
+    <div class="pain-quote reveal">
+      <div class="qmark">“</div>
+      <div class="text">Проблема не&nbsp;у&nbsp;Вас. Проблема — у&nbsp;відсутності <em>архітектури масштабу</em>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 3 — OUTCOMES ============ -->
+<section class="section section--paper-2" id="outcomes" data-screen-label="04 Outcomes">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">02</span><span>Результати сесії</span></div>
+        <h2 class="h2">Що&nbsp;Ви отримаєте&nbsp;за <span style="color:var(--orange)">60&nbsp;хвилин</span> роботи.</h2>
+      </div>
+      <p class="lead">Це&nbsp;не&nbsp;мотиваційна розмова. Це&nbsp;стратегічний розбір саме вашої ситуації — з&nbsp;конкретними цифрами, гіпотезами і&nbsp;наступним кроком.</p>
+    </div>
+
+    <div class="outcome-list reveal">
+      <div class="outcome-row">
+        <div class="outcome-num">01</div>
+        <div class="outcome-text">Чітко визначена <b>точка&nbsp;А</b> — реальний стан вашого бізнесу без&nbsp;ілюзій.</div>
+        <div class="outcome-tag">Діагностика</div>
+      </div>
+      <div class="outcome-row">
+        <div class="outcome-num">02</div>
+        <div class="outcome-text">Виявлено мінімум <b>3 головні обмеження росту</b>, про які ви, можливо, навіть не&nbsp;здогадувались.</div>
+        <div class="outcome-tag">Аудит</div>
+      </div>
+      <div class="outcome-row">
+        <div class="outcome-num">03</div>
+        <div class="outcome-text">Персональна <b>модель покращення продажів</b> саме у&nbsp;вашому бізнесі.</div>
+        <div class="outcome-tag">Стратегія</div>
+      </div>
+      <div class="outcome-row">
+        <div class="outcome-num">04</div>
+        <div class="outcome-text">Розуміння, як&nbsp;<b>підвищити чек</b> без&nbsp;«впарювання» і&nbsp;відчуття незручності.</div>
+        <div class="outcome-tag">Ціноутворення</div>
+      </div>
+      <div class="outcome-row">
+        <div class="outcome-num">05</div>
+        <div class="outcome-text">Конкретний <b>план дій</b> для&nbsp;зростання доходу вже у&nbsp;найближчі 30–90&nbsp;днів.</div>
+        <div class="outcome-tag">План</div>
+      </div>
+    </div>
+
+    <p class="outcome-callout reveal">Це&nbsp;не&nbsp;мотиваційна розмова. Це&nbsp;<em>стратегічний розбір</em> вашої конкретної ситуації.</p>
+  </div>
+</section>
+
+<!-- ============ BLOCK 5 — FIT ============ -->
+<section class="section section--paper" id="fit" data-screen-label="05 Fit">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">03</span><span>Для кого</span></div>
+        <h2 class="h2">Сесія дає&nbsp;результат не&nbsp;кожному. Перевірте, чи&nbsp;ви&nbsp;«свій».</h2>
+      </div>
+      <p class="lead">Я&nbsp;беру в&nbsp;роботу лише тих, хто&nbsp;готовий впроваджувати. Так формат і&nbsp;ціна $20 виправдовуються — для&nbsp;вас і&nbsp;для&nbsp;мене.</p>
+    </div>
+  </div>
+
+  <div class="fits-grid reveal">
+    <div class="fits-col fits-col--yes">
+      <h3><span class="icon">✓</span>Вам пасує, якщо ви…</h3>
+      <ul class="fits-list">
+        <li>Власник малого або&nbsp;середнього бізнесу і&nbsp;хочете ×2 в&nbsp;доході та&nbsp;системні продажі.</li>
+        <li>Експерт або&nbsp;підприємець з&nbsp;3+&nbsp;роками досвіду, будуєте персональний бренд.</li>
+        <li>Керівник команди або&nbsp;підприємець на&nbsp;етапі масштабування.</li>
+        <li>Прагнете стабільно заробляти від&nbsp;$10&nbsp;000+ на&nbsp;своїх послугах.</li>
+        <li>Готові впроваджувати зміни, а&nbsp;не&nbsp;просто «послухати».</li>
+      </ul>
+    </div>
+    <div class="fits-col fits-col--no">
+      <h3><span class="icon">×</span>Не&nbsp;пасує, якщо ви…</h3>
+      <ul class="fits-list">
+        <li>Шукаєте «чарівну кнопку» без&nbsp;роботи над&nbsp;собою.</li>
+        <li>Не&nbsp;готові змінювати підхід до&nbsp;продажів і&nbsp;лідерства.</li>
+        <li>Відповідальність за&nbsp;результат перекладаєте на&nbsp;обставини, ринок або&nbsp;команду.</li>
+        <li>Хочете «спробувати», але&nbsp;не&nbsp;готові виділити час на&nbsp;підготовку до&nbsp;сесії.</li>
+        <li>Очікуєте, що&nbsp;хтось зробить роботу за&nbsp;вас.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 4 — BONUS ============ -->
+<section class="section bonus" id="bonus" data-screen-label="06 Bonus">
+  <div class="container">
+    <div class="bonus-single reveal">
+      <div class="bonus-label">🎁 Бонус для&nbsp;учасників</div>
+      <h2>Авторський відео-урок <em class="bonus-em">«ТОП-10 помилок у&nbsp;продажах»</em> у&nbsp;подарунок кожному, хто&nbsp;проходить сесію.</h2>
+      <div class="bonus-columns">
+        <ul class="bonus-list">
+          <li>Чому «хороший продукт» не&nbsp;продає себе сам.</li>
+          <li>Де&nbsp;підприємці залишають гроші на&nbsp;столі — і&nbsp;навіть не&nbsp;помічають цього.</li>
+          <li>Як&nbsp;вийти з&nbsp;позиції прохача і&nbsp;продавати з&nbsp;позиції експерта.</li>
+        </ul>
+        <ul class="bonus-list">
+          <li>Чому знижки руйнують ваш бізнес — і&nbsp;як&nbsp;доносити цінність без&nbsp;них.</li>
+          <li>Як&nbsp;побудувати систему, що&nbsp;генерує клієнтів без&nbsp;постійного «прогріву».</li>
+          <li>Як&nbsp;закривати угоди на&nbsp;вищий чек без&nbsp;відчуття «впарювання».</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 6 — FORMAT ============ -->
+<section class="section section--paper-2" id="format" data-screen-label="07 Format">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">04</span><span>Формат роботи</span></div>
+        <h2 class="h2">4 кроки до&nbsp;ясності у&nbsp;вашому бізнесі.</h2>
+      </div>
+      <p class="lead">Це&nbsp;не&nbsp;«знайомство», не&nbsp;«консультація-на&nbsp;ходу». Я&nbsp;приходжу підготовленою саме до&nbsp;вашої ситуації — і&nbsp;ми&nbsp;одразу працюємо.</p>
+    </div>
+
+    <div class="format-grid reveal">
+      <div class="format-step">
+        <span class="step-tag">Крок 01</span>
+        <div class="step-num"><b>01</b></div>
+        <div class="step-title">Анкета</div>
+        <p class="step-desc">Ви&nbsp;заповнюєте поглиблену діагностичну анкету, щоб я&nbsp;прийшла на&nbsp;сесію вже підготованою саме до&nbsp;вашої ситуації.</p>
+      </div>
+      <div class="format-step">
+        <span class="step-tag">Крок 02</span>
+        <div class="step-num"><b>02</b></div>
+        <div class="step-title">Аналіз запиту</div>
+        <p class="step-desc">Я&nbsp;аналізую ваш запит до&nbsp;початку зустрічі — щоб не&nbsp;витрачати ваш час на&nbsp;«знайомство» і&nbsp;одразу зайти у&nbsp;суть.</p>
+      </div>
+      <div class="format-step">
+        <span class="step-tag">Крок 03</span>
+        <div class="step-num"><b>03</b></div>
+        <div class="step-title">60 хв розбору</div>
+        <p class="step-desc">Проводимо 60&nbsp;хвилин стратегічного розбору у&nbsp;форматі живої роботи, а&nbsp;не&nbsp;лекції. Працюємо з&nbsp;вашими цифрами та&nbsp;кейсами.</p>
+      </div>
+      <div class="format-step">
+        <span class="step-tag">Крок 04</span>
+        <div class="step-num"><b>04</b></div>
+        <div class="step-title">Ясність і&nbsp;крок</div>
+        <p class="step-desc">Ви&nbsp;отримуєте чітке бачення і&nbsp;конкретний наступний крок для&nbsp;масштабування вашого бізнесу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 7 — PRICE ============ -->
+<section class="section price" id="price" data-screen-label="08 Price">
+  <div class="container">
+    <div class="reveal">
+      <div class="label" style="color:var(--orange); margin-bottom:24px; font-size:var(--fs-eyebrow); letter-spacing:0.22em; text-transform:uppercase; font-weight:800;">
+        05 · Інвестиція
+      </div>
+      <h2 class="price-headline">Перші <em>10 учасників</em> — за&nbsp;ціною ділового сніданку.</h2>
+    </div>
+
+    <div class="price-card-grid">
+      <div class="price-card reveal">
+        <div class="tag">Спецпропозиція</div>
+        <div class="from">
+          <span class="was">$350</span>
+          <span class="arrow-px">→</span>
+        </div>
+        <div class="now"><span class="cur">$</span>20</div>
+        <div class="savings">Економія <b>понад&nbsp;94%</b> від&nbsp;реальної вартості сесії.</div>
+        <button class="btn btn-lg" data-open-form style="margin-top:auto">
+          <span>Забронювати місце</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div class="price-explain reveal">
+        <h3>Чому так&nbsp;дешево?</h3>
+        <p>Стратегічний розбір коштує&nbsp;$350. Я&nbsp;відкриваю 10 місць по&nbsp;$20, щоб ви&nbsp;переконались на&nbsp;власному досвіді: це&nbsp;працює. Після сесії ви&nbsp;самі вирішите, чи&nbsp;готові рухатись далі.</p>
+        <p style="font-family:var(--font-display); font-size:clamp(20px, 1.8vw, 26px); line-height:1.15; color:#fff; letter-spacing:-0.01em;">Це&nbsp;не&nbsp;знижка заради знижки. Це&nbsp;моя&nbsp;<span style="color:var(--orange)">ставка на&nbsp;вас</span>.</p>
+        <ul>
+          <li>Понад 94% знижка від&nbsp;реальної вартості сесії</li>
+          <li>Повноцінна глибока робота — не&nbsp;скорочений формат</li>
+          <li>Лише 10 учасників — особиста увага</li>
+          <li>Без&nbsp;прихованих зобов'язань після сесії</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="seats-bar reveal">
+      <div class="left">
+        <div class="clock">⏳</div>
+        <div class="info">Залишилось місць: <b><span data-seats-count>7</span> / 10</b></div>
+      </div>
+      <div class="dots" aria-hidden="true" data-seats-dots></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 8 — ABOUT ============ -->
+<section class="section section--paper" id="about" data-screen-label="09 About">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">06</span><span>Про спікера</span></div>
+        <h2 class="h2">Системи, які дають <span style="color:var(--orange)">прогнозований результат</span> у&nbsp;бізнесі.</h2>
+      </div>
+      <p class="lead">Не&nbsp;«ще одна тренерка з&nbsp;Instagram». 11&nbsp;років у&nbsp;бізнесі, 120+ корпоративних клієнтів, авторська методика та&nbsp;робота з&nbsp;власниками і&nbsp;командами.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="speaker-about.jpg" alt="Оксана Винницька — бізнес-коуч, портрет">
+        <div class="name-tag">
+          <span>Business Coach · ICF</span>
+          <b>Оксана Винницька</b>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <h2>Оксана <span class="accent">Винницька</span></h2>
+        <p>Бізнес-коуч, топ&nbsp;бізнес-тренерка з&nbsp;продажів та&nbsp;лідерства з&nbsp;11-річним досвідом у&nbsp;бізнесі та&nbsp;менторка лідерів.</p>
+        <p>Допомагаю бізнесу підвищувати ефективність через системне навчання лідерства та&nbsp;продажів і&nbsp;глибоку роботу з&nbsp;мисленням.</p>
+
+        <div class="about-method">
+          <h4>Авторська методика поєднує</h4>
+          <ul>
+            <li>Коучингові інструменти в&nbsp;управлінні командою</li>
+            <li>Практичні техніки та&nbsp;алгоритми для&nbsp;збільшення продажів</li>
+            <li>Розвиток мислення та&nbsp;лідерського потенціалу</li>
+          </ul>
+        </div>
+
+        <div class="about-credentials">
+          <div class="cred-item"><div class="cred-num">11</div><div class="cred-text">років у&nbsp;HR і&nbsp;корпоративному бізнесі — від&nbsp;HR-менеджера до&nbsp;регіонального бізнес-тренера.</div></div>
+          <div class="cred-item"><div class="cred-num">8</div><div class="cred-text">років у&nbsp;побудові відділів продажів B2B та&nbsp;B2C.</div></div>
+          <div class="cred-item"><div class="cred-num">120<span style="color:var(--ink); font-size:0.6em;">+</span></div><div class="cred-text">компаній довірили навчання своїх команд з&nbsp;2017 року.</div></div>
+          <div class="cred-item"><div class="cred-num">5K<span style="color:var(--ink); font-size:0.6em;">+</span></div><div class="cred-text">управлінців і&nbsp;менеджерів пройшли мої програми.</div></div>
+        </div>
+
+        <div class="about-roles">
+          <h4>Експертиза та&nbsp;членство</h4>
+          <ul>
+            <li>Сертифікований коуч ICF (1000+ сесій)</li>
+            <li>Експертка з&nbsp;продажів · Дія.Бізнес</li>
+            <li>Менторка · RISE</li>
+            <li>Авторка «Щоденника Лідера»</li>
+            <li>ТОП-100 жінок України</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="clients reveal">
+      <h3>Клієнти корпоративних тренінгів</h3>
+      <p class="sub">2017 — донині</p>
+      <div class="clients-marquee">
+        <div class="clients-track">
+          <span>Bader Ukraine</span><span class="dot"></span>
+          <span>Еколавка</span><span class="dot"></span>
+          <span>Columbia</span><span class="dot"></span>
+          <span>Malevich Night Club</span><span class="dot"></span>
+          <span>Персона Люкс</span><span class="dot"></span>
+          <span>IVORY</span><span class="dot"></span>
+          <span>Grand Hotel Lviv</span><span class="dot"></span>
+          <span>Джорджина</span><span class="dot"></span>
+          <span>AMWAY</span><span class="dot"></span>
+          <span>Teplyy Design</span><span class="dot"></span>
+          <span>Barbercompany</span><span class="dot"></span>
+          <span>Andreas Moskin</span><span class="dot"></span>
+          <span>Красна Садиба</span><span class="dot"></span>
+          <span>CERSANIT</span><span class="dot"></span>
+          <span>ВЕКТОР</span><span class="dot"></span>
+          <span>Vicosmetics</span><span class="dot"></span>
+          <span>NBS Lviv</span><span class="dot"></span>
+          <span>DACSA</span><span class="dot"></span>
+          <span>Crédit Agricole</span><span class="dot"></span>
+          <!-- duplicate for marquee loop -->
+          <span>Bader Ukraine</span><span class="dot"></span>
+          <span>Еколавка</span><span class="dot"></span>
+          <span>Columbia</span><span class="dot"></span>
+          <span>Malevich Night Club</span><span class="dot"></span>
+          <span>Персона Люкс</span><span class="dot"></span>
+          <span>IVORY</span><span class="dot"></span>
+          <span>Grand Hotel Lviv</span><span class="dot"></span>
+          <span>Джорджина</span><span class="dot"></span>
+          <span>AMWAY</span><span class="dot"></span>
+          <span>Teplyy Design</span><span class="dot"></span>
+          <span>Barbercompany</span><span class="dot"></span>
+          <span>Andreas Moskin</span><span class="dot"></span>
+          <span>Красна Садиба</span><span class="dot"></span>
+          <span>CERSANIT</span><span class="dot"></span>
+          <span>ВЕКТОР</span><span class="dot"></span>
+          <span>Vicosmetics</span><span class="dot"></span>
+          <span>NBS Lviv</span><span class="dot"></span>
+          <span>DACSA</span><span class="dot"></span>
+          <span>Crédit Agricole</span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 9 — TESTIMONIALS ============ -->
+<section class="section testi" id="testi" data-screen-label="10 Testimonials">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div>
+        <div class="label"><span class="num">07</span><span>Відгуки</span></div>
+        <h2 class="h2">Що&nbsp;кажуть підприємці після&nbsp;сесії.</h2>
+      </div>
+      <p class="lead">Реальні власники бізнесу, які прийшли з&nbsp;конкретним запитом і&nbsp;вийшли з&nbsp;планом дій. Скріни відгуків — без&nbsp;монтажу.</p>
+    </div>
+
+    <div class="testi-masonry reveal">
+      <div class="testi-col">
+        <a class="testi-shot" href="testi-1.jpg" target="_blank" rel="noopener" aria-label="Відгук 1">
+          <img src="testi-1.jpg" alt="Відгук учасниці тренінгу — Telegram" loading="lazy">
+          <span class="testi-meta"><span>Telegram</span><span>Тренінг</span></span>
+        </a>
+        <a class="testi-shot" href="testi-6.jpg" target="_blank" rel="noopener" aria-label="Відгук Вероніки Літовченко">
+          <img src="testi-6.jpg" alt="Відгук — Вероніка Літовченко, директор з маркетингу" loading="lazy">
+          <span class="testi-meta"><span>5★ · Веб-сайт</span><span>Маркетинг · Львів</span></span>
+        </a>
+        <a class="testi-shot" href="testi-8.jpg" target="_blank" rel="noopener" aria-label="Відгук Катерини Бурнашевої">
+          <img src="testi-8.jpg" alt="Відгук — Катерина Бурнашева" loading="lazy">
+          <span class="testi-meta"><span>Telegram</span><span>Модуль про заперечення</span></span>
+        </a>
+      </div>
+
+      <div class="testi-col">
+        <a class="testi-shot" href="testi-2.jpg" target="_blank" rel="noopener" aria-label="Відгуки учасників — серія повідомлень">
+          <img src="testi-2.jpg" alt="Серія відгуків з тренінгу" loading="lazy">
+          <span class="testi-meta"><span>Telegram · 5 повідомлень</span><span>Корпоративний курс</span></span>
+        </a>
+        <a class="testi-shot" href="testi-4.jpg" target="_blank" rel="noopener" aria-label="Відгук — Дмитро Кушнарьов">
+          <img src="testi-4.jpg" alt="Відгук — Дмитро Кушнарьов та учасники" loading="lazy">
+          <span class="testi-meta"><span>Telegram</span><span>Курс продажів</span></span>
+        </a>
+        <a class="testi-shot" href="testi-7.jpg" target="_blank" rel="noopener" aria-label="Відгук — Roman FunFan">
+          <img src="testi-7.jpg" alt="Відгук — Roman FunFan, CEO" loading="lazy">
+          <span class="testi-meta"><span>5★ · vynnytska.com</span><span>CEO · FunFan</span></span>
+        </a>
+      </div>
+
+      <div class="testi-col">
+        <a class="testi-shot" href="testi-3.jpg" target="_blank" rel="noopener" aria-label="Відгуки команди">
+          <img src="testi-3.jpg" alt="Відгуки команди після тренінгу" loading="lazy">
+          <span class="testi-meta"><span>Telegram · команда</span><span>6 модулів</span></span>
+        </a>
+        <a class="testi-shot" href="testi-5.jpg" target="_blank" rel="noopener" aria-label="Відгук Альони Схаб">
+          <img src="testi-5.jpg" alt="Відгук Альони Схаб — адмін команди" loading="lazy">
+          <span class="testi-meta"><span>Telegram</span><span>Курс продажів</span></span>
+        </a>
+        <a class="testi-shot" href="testi-9.jpg" target="_blank" rel="noopener" aria-label="Відгук — курс психології продажів">
+          <img src="testi-9.jpg" alt="Відгук про курс психології продажів" loading="lazy">
+          <span class="testi-meta"><span>Telegram</span><span>Психологія продажів</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="testi-cta reveal">
+      <div>
+        <h3>Понад <b>5000</b> управлінців і&nbsp;підприємців пройшли мої програми з&nbsp;2017&nbsp;року.</h3>
+        <p>Це&nbsp;не&nbsp;відгуки заради відгуків — це&nbsp;щоденна робота з&nbsp;власниками бізнесу, командами та&nbsp;лідерами по&nbsp;всій Україні.</p>
+      </div>
+      <button class="btn btn-lg" data-open-form>
+        <span>Записатися на&nbsp;розбір</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOCK 10 — FINAL CTA ============ -->
+<section class="final-cta" id="apply" data-screen-label="11 Final CTA">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--orange); margin-bottom:32px;">08 · Готові?</div>
+      <h2>З&nbsp;хаосу — <em>у&nbsp;систему.</em></h2>
+      <p class="sub">Почніть зі&nbsp;стратегічного розбору і&nbsp;отримайте доступ до&nbsp;відео-уроку «Позиціонування бренду, яке&nbsp;підвищує чек».</p>
+    </div>
+
+    <div class="final-cta-steps reveal">
+      <div class="step">
+        <span class="n">01</span>
+        <div class="t">Ви&nbsp;заповнюєте анкету (5–7&nbsp;хв)</div>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <div class="t">Я&nbsp;особисто зв'язуюсь і&nbsp;підтверджую зручний час</div>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <div class="t">Проводимо сесію — ви&nbsp;виходите з&nbsp;ясністю і&nbsp;планом</div>
+      </div>
+    </div>
+
+    <button class="btn btn-lg" data-open-form>
+      <span>Подати заявку за&nbsp;$20</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+    <p style="margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.06em;">
+      Місць залишилось: <b style="color: var(--orange);"><span data-seats-count>7</span> / 10</b>
+    </p>
+
+    <div class="socials reveal">
+      <div class="socials-label">Або напишіть мені напряму</div>
+      <div class="socials-row">
+        <a class="social-btn" href="https://www.instagram.com/vynnytska.oksana/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.05 1.8.25 2.2.42.6.22 1 .5 1.4.9.4.4.7.8.9 1.4.18.42.37 1.04.42 2.2.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.16-.24 1.78-.42 2.2-.22.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.42.18-1.04.37-2.2.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.16-.05-1.78-.24-2.2-.42-.6-.22-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.18-.42-.37-1.04-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.05-1.2.25-1.82.42-2.24.22-.56.5-.96.9-1.36.4-.4.8-.68 1.4-.9.42-.18 1.04-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 2.16c-3.15 0-3.51.01-4.75.07-.99.05-1.53.21-1.89.35-.47.18-.81.4-1.17.76-.36.36-.58.7-.76 1.17-.14.36-.3.9-.35 1.89-.06 1.24-.07 1.6-.07 4.75 0 3.15.01 3.51.07 4.75.05.99.21 1.53.35 1.89.18.47.4.81.76 1.17.36.36.7.58 1.17.76.36.14.9.3 1.89.35 1.24.06 1.6.07 4.75.07s3.51-.01 4.75-.07c.99-.05 1.53-.21 1.89-.35.47-.18.81-.4 1.17-.76.36-.36.58-.7.76-1.17.14-.36.3-.9.35-1.89.06-1.24.07-1.6.07-4.75 0-3.15-.01-3.51-.07-4.75-.05-.99-.21-1.53-.35-1.89-.18-.47-.4-.81-.76-1.17-.36-.36-.7-.58-1.17-.76-.36-.14-.9-.3-1.89-.35C15.51 4.37 15.15 4.36 12 4.36zm0 3.68a3.96 3.96 0 1 1 0 7.92 3.96 3.96 0 0 1 0-7.92zm0 6.53a2.57 2.57 0 1 0 0-5.14 2.57 2.57 0 0 0 0 5.14zm5.04-6.69a.92.92 0 1 1-1.84 0 .92.92 0 0 1 1.84 0z"/>
+          </svg>
+          <div class="social-text"><span>Instagram</span><b>@vynnytska.oksana</b></div>
+          <span class="arrow social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-btn" href="https://t.me/oksanavynnytska" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M21.95 3.78L18.4 20.6c-.27 1.18-.97 1.47-1.97.92l-5.43-4-2.62 2.52c-.29.29-.53.53-1.09.53l.39-5.5L17.3 5.97c.43-.38-.1-.6-.66-.22L6.27 12.3l-5.3-1.66c-1.15-.36-1.17-1.15.24-1.7L20.46 2.1c.96-.36 1.8.22 1.49 1.68z"/>
+          </svg>
+          <div class="social-text"><span>Telegram</span><b>@oksanavynnytska</b></div>
+          <span class="arrow social-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="brand" style="color:#fff;">
+      <img src="logo-dark.png" alt="Oksana Vynnytska" class="brand-logo brand-logo--lg">
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 · Oksana Vynnytska</span>
+      <a href="https://t.me/oksanavynnytska" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.instagram.com/vynnytska.oksana/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#">Політика конфіденційності</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div class="label">Залишилось <b><span data-seats-count>7</span>/10</b> місць</div>
+  <button class="btn" data-open-form>
+    <span>Записатися · $20</span>
+    <span class="arrow" aria-hidden="true">→</span>
+  </button>
+</div>
+
+<!-- ============ MODAL FORM ROOT ============ -->
+<div id="modal-root"></div>
+
+<!-- ============ TWEAKS ROOT ============ -->
+<div id="tweaks-root"></div>
+
+
+<script type="text/babel">
+
+const { useState } = React;
+function useTweaks(defaults) {
+  const [state, setState] = React.useState(defaults);
+  const setTweak = (key, value) => setState(prev => ({ ...prev, [key]: value }));
+  return [state, setTweak];
+}
+function TweaksPanel({ children }) { return null; }
+function TweakSection() { return null; }
+function TweakColor() { return null; }
+function TweakRadio() { return null; }
+function TweakSlider() { return null; }
+function TweakSelect() { return null; }
+function TweakButton() { return null; }
+
+// app.jsx — interactivity + modal form + Tweaks panel
+
+const { useState, useEffect, useRef } = React;
+
+// ============ SCROLL REVEAL ============
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(el => io.observe(el));
+}
+
+// ============ STAT COUNTERS ============
+function initCounters() {
+  const els = document.querySelectorAll('[data-count-to]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.countTo, 10);
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v = Math.round(target * eased);
+        el.textContent = v >= 1000 ? v.toLocaleString('uk-UA').replace(/\u00A0/g,' ') : String(v);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  els.forEach(el => io.observe(el));
+}
+
+// ============ STICKY CTA ============
+function initStickyCta() {
+  const el = document.getElementById('stickyCta');
+  if (!el) return;
+  let last = 0;
+  const onScroll = () => {
+    const y = window.scrollY;
+    const show = y > 600 && y < (document.documentElement.scrollHeight - window.innerHeight - 400);
+    el.classList.toggle('visible', show);
+    el.setAttribute('aria-hidden', show ? 'false' : 'true');
+    last = y;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+// ============ SEAT DOTS ============
+function renderSeatDots(taken) {
+  document.querySelectorAll('[data-seats-dots]').forEach(host => {
+    host.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+      const d = document.createElement('span');
+      d.className = 'dot' + (i < taken ? ' taken' : '');
+      host.appendChild(d);
+    }
+  });
+}
+
+// ============ MODAL FORM ============
+const TELEGRAM_URL = 'https://t.me/oksanavynnytska';
+const FORM_URL = 'https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform';
+
+function ModalForm({ open, onClose, seats }) {
+  const [sent, setSent] = useState(false);
+  const [data, setData] = useState({ name: '', phone: '' });
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open, onClose]);
+
+  // Reset when opening fresh
+  useEffect(() => {
+    if (open) { setSent(false); }
+  }, [open]);
+
+  if (!open) return null;
+
+  const update = (k, v) => setData(d => ({ ...d, [k]: v }));
+  const canSubmit = data.name.trim() && data.phone.trim().length >= 5;
+
+  const buildMessage = () =>
+    `Вітаю! Я ${data.name}, мій номер: ${data.phone}. Хочу записатися на стратегічну сесію за $20.`;
+
+  const submit = async (e) => {
+    e?.preventDefault?.();
+    if (!canSubmit) return;
+
+    const msg = buildMessage();
+
+    // 1) Save lead locally as a backup (in case any tracker / pixel needs it)
+    try {
+      const leads = JSON.parse(localStorage.getItem('ov_leads') || '[]');
+      leads.push({ ...data, ts: new Date().toISOString() });
+      localStorage.setItem('ov_leads', JSON.stringify(leads));
+    } catch {}
+
+    // 2) Fire a conversion event so ad pixels (FB/Google) can hook in
+    window.dispatchEvent(new CustomEvent('ov:lead-submitted', { detail: data }));
+
+    // 3) Copy message to clipboard so user can paste it into Telegram
+    try {
+      await navigator.clipboard.writeText(msg);
+    } catch {}
+
+    // 4) Open Telegram in a new tab
+    window.open(TELEGRAM_URL, '_blank', 'noopener');
+
+    setSent(true);
+  };
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={e => e.stopPropagation()} role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button className="modal-close" onClick={onClose} aria-label="Закрити">✕</button>
+
+        {sent ? (
+          <div className="modal-success">
+            <div className="success-mark">✓</div>
+            <h3 id="modalTitle">Дякую, {data.name || 'друже'}!</h3>
+            <p>Зараз відкрився Telegram. Повідомлення вже скопійовано — просто вставте і&nbsp;надішліть мені. Я&nbsp;особисто відповім протягом 24&nbsp;годин.</p>
+            <div className="success-message">
+              <div className="success-message-label">Скопійоване повідомлення:</div>
+              <div className="success-message-text">{buildMessage()}</div>
+              <button type="button" className="success-copy" onClick={async () => {
+                try { await navigator.clipboard.writeText(buildMessage()); } catch {}
+              }}>📋 Скопіювати ще раз</button>
+            </div>
+            <a className="btn btn-lg" href={TELEGRAM_URL} target="_blank" rel="noopener">
+              <span>Відкрити Telegram</span>
+              <span className="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        ) : (
+          <div className="modal-inner">
+            <div className="modal-head">
+              <div>
+                <div className="modal-eyebrow">Заявка · стратегічна сесія</div>
+                <h3 id="modalTitle">Залиште ім'я і&nbsp;телефон.</h3>
+                <p className="modal-sub">Натисніть «Подати заявку» — і&nbsp;відкриється Telegram, де&nbsp;я&nbsp;особисто підтверджу зручний час сесії.</p>
+              </div>
+              <div className="modal-price">
+                <div className="was">$350</div>
+                <div className="now">$20</div>
+                <div className="seats-tag">Місць: <b>{seats}/10</b></div>
+              </div>
+            </div>
+
+            <form className="modal-form" onSubmit={submit}>
+              <div className="form-field">
+                <label>Ваше ім'я *</label>
+                <input type="text" value={data.name} onChange={e=>update('name', e.target.value)} placeholder="Як до вас звертатися" required autoFocus />
+              </div>
+              <div className="form-field">
+                <label>Телефон *</label>
+                <input type="tel" value={data.phone} onChange={e=>update('phone', e.target.value)} placeholder="+380…" required />
+              </div>
+
+              <div className="modal-nav">
+                <div className="privacy">Натискаючи кнопку, ви&nbsp;погоджуєтесь на&nbsp;обробку даних. Я&nbsp;не&nbsp;спамлю — пишу особисто лише раз, щоб домовитись про&nbsp;сесію.</div>
+                <div className="modal-nav-btns">
+                  <button type="submit" className="btn btn-lg" disabled={!canSubmit}>
+                    <span>Подати заявку · $20</span>
+                    <span className="arrow" aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ============ TWEAKS UI ============
+const TWEAK_DEFAULTS = window.__TWEAKS__ || {
+  theme: 'dark',
+  accent: '#F26B1F',
+  seatsRemaining: 7,
+  heroVariant: 'split',
+  fontScale: 1.0,
+  photoTone: 'natural'
+};
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [open, setOpen] = useState(false);
+
+  // Apply tweaks to DOM
+  useEffect(() => {
+    document.documentElement.style.setProperty('--orange', t.accent);
+    // derive lighter accent for hover
+    document.documentElement.style.setProperty('--orange-2', t.accent);
+
+    document.body.dataset.theme = t.theme;
+    if (t.theme === 'light') {
+      document.documentElement.style.setProperty('--ink', '#1a1a1c');
+      // we keep dark sections as-is for rhythm
+    }
+
+    document.documentElement.style.fontSize = (16 * t.fontScale) + 'px';
+
+    // photo tone
+    const heroPhoto = document.querySelector('[data-photo-tone]');
+    if (heroPhoto) {
+      const tones = {
+        natural: 'contrast(1.02) saturate(0.95)',
+        bw: 'grayscale(1) contrast(1.1)',
+        warm: 'sepia(0.25) saturate(1.1) contrast(1.05)',
+        moody: 'contrast(1.15) saturate(0.6) brightness(0.85)',
+      };
+      heroPhoto.style.filter = tones[t.photoTone] || tones.natural;
+    }
+
+    // seats
+    document.querySelectorAll('[data-seats-count]').forEach(el => el.textContent = String(t.seatsRemaining));
+    renderSeatDots(10 - t.seatsRemaining);
+  }, [t.accent, t.theme, t.fontScale, t.photoTone, t.seatsRemaining]);
+
+  useEffect(() => {
+    initReveal();
+    initCounters();
+    initStickyCta();
+    // Open Google Form in new tab on CTA click
+    const handler = (e) => {
+      e?.preventDefault?.();
+      // Fire conversion event so ad pixels (FB/Google) can hook in
+      window.dispatchEvent(new CustomEvent('ov:cta-click', { detail: { target: 'google-form' } }));
+      window.open(FORM_URL, '_blank', 'noopener');
+    };
+    document.querySelectorAll('[data-open-form]').forEach(b => b.addEventListener('click', handler));
+    return () => {
+      document.querySelectorAll('[data-open-form]').forEach(b => b.removeEventListener('click', handler));
+    };
+  }, []);
+
+  return (
+    <>
+      <ModalForm open={open} onClose={()=>setOpen(false)} seats={t.seatsRemaining} />
+      <TweaksPanel>
+        <TweakSection label="Брендинг" />
+        <TweakColor
+          label="Акцентний колір"
+          value={t.accent}
+          options={['#F26B1F', '#E94E1B', '#FF9A1F', '#D4AF37', '#1F8A5B']}
+          onChange={(v) => setTweak('accent', v)}
+        />
+        <TweakRadio
+          label="Тема"
+          value={t.theme}
+          options={['dark', 'light']}
+          onChange={(v) => setTweak('theme', v)}
+        />
+        <TweakSlider
+          label="Масштаб шрифту"
+          value={t.fontScale}
+          min={0.9} max={1.1} step={0.05}
+          onChange={(v) => setTweak('fontScale', v)}
+        />
+
+        <TweakSection label="Hero" />
+        <TweakSelect
+          label="Обробка фото"
+          value={t.photoTone}
+          options={[
+            { value: 'natural', label: 'Натуральне' },
+            { value: 'bw', label: 'Чорно-біле' },
+            { value: 'warm', label: 'Теплий тон' },
+            { value: 'moody', label: 'Кінематографічне' },
+          ]}
+          onChange={(v) => setTweak('photoTone', v)}
+        />
+
+        <TweakSection label="Заклик до дії" />
+        <TweakSlider
+          label="Місць залишилось"
+          value={t.seatsRemaining}
+          min={1} max={10} step={1} unit="/10"
+          onChange={(v) => setTweak('seatsRemaining', v)}
+        />
+
+        <TweakSection label="Дії" />
+        <TweakButton label="Відкрити анкету (Google Forms)" onClick={() => window.open(FORM_URL, '_blank', 'noopener')} />
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<App />);
+
+</script>
+</body>
+</html>
