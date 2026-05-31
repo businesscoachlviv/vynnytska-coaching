@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/site.html"
+      "destination": "/oksana.html"
     },
     {
       "source": "/index.html",
-      "destination": "/site.html"
+      "destination": "/oksana.html"
     }
   ]
 }
