@@ -65,7 +65,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
       <a href="#price">Інвестиція</a>
       <a href="#about">Спікер</a>
     </nav>
-    <a class="btn"  href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+    <a class="btn"  href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
       <span>Записатися</span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
@@ -101,7 +101,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
         </ul>
 
         <div class="hero-actions">
-          <a class="btn btn-lg"  href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+          <a class="btn btn-lg"  href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
             <span>Записатися за&nbsp;$20</span>
             <span class="arrow" aria-hidden="true">→</span>
           </a>
@@ -332,7 +332,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
         </div>
         <div class="now"><span class="cur">$</span>20</div>
         <div class="savings">Економія <b>понад&nbsp;94%</b> від&nbsp;реальної вартості сесії.</div>
-        <a class="btn btn-lg"  style="margin-top:auto" href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+        <a class="btn btn-lg"  style="margin-top:auto" href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
           <span>Забронювати місце</span>
           <span class="arrow" aria-hidden="true">→</span>
         </a>
@@ -528,7 +528,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
         <h3>Понад <b>5000</b> управлінців і&nbsp;підприємців пройшли мої програми з&nbsp;2017&nbsp;року.</h3>
         <p>Це&nbsp;не&nbsp;відгуки заради відгуків — це&nbsp;щоденна робота з&nbsp;власниками бізнесу, командами та&nbsp;лідерами по&nbsp;всій Україні.</p>
       </div>
-      <a class="btn btn-lg"  href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+      <a class="btn btn-lg"  href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
         <span>Записатися на&nbsp;розбір</span>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
@@ -560,7 +560,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
       </div>
     </div>
 
-    <a class="btn btn-lg"  href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+    <a class="btn btn-lg"  href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
       <span>Подати заявку за&nbsp;$20</span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
@@ -600,7 +600,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
       <span>© 2026 · Oksana Vynnytska</span>
       <a href="https://t.me/oksanavynnytska" target="_blank" rel="noopener">Telegram</a>
       <a href="https://www.instagram.com/vynnytska.oksana/" target="_blank" rel="noopener">Instagram</a>
-      <a href="#">Політика конфіденційності</a>
+      <a href="privacy.html">Політика конфіденційності</a>
     </div>
   </div>
 </footer>
@@ -608,7 +608,7 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
 <!-- ============ STICKY CTA ============ -->
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <div class="label">Залишилось <b><span data-seats-count>7</span>/10</b> місць</div>
-  <a class="btn"  href="https://docs.google.com/forms/d/1yqNlkcOmK_R9URjBRWIOUuL8QTuQyc3rnDToSwnb0dg/viewform" target="_blank" rel="noopener">
+  <a class="btn"  href="https://secure.wayforpay.com/button/b80f21cc3424f" target="_blank" rel="noopener">
     <span>Записатися · $20</span>
     <span class="arrow" aria-hidden="true">→</span>
   </a>
@@ -640,6 +640,10 @@ src="https://www.facebook.com/tr?id=892749903784140&ev=PageView&noscript=1"/></n
     requestAnimationFrame(tick);
   }
   function run() {
+    // fire Meta Pixel Lead on any CTA click
+    document.querySelectorAll('a.btn').forEach(function(b){
+      b.addEventListener('click', function(){ window.dispatchEvent(new CustomEvent('ov:cta-click')); });
+    });
     var els = document.querySelectorAll('[data-count-to]');
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(entries){
