@@ -1,2 +1,0 @@
-# vynnytska-coaching
-session
